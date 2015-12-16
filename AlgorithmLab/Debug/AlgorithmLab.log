@@ -1,0 +1,36 @@
+﻿生成启动时间为 2015/12/9 18:46:41。
+     1>项目“c:\Users\infertom-pc\documents\visual studio 2010\Projects\AlgorithmLab\AlgorithmLab\AlgorithmLab.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“Debug\AlgorithmLab.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         D:\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt three.cpp
+         three.cpp
+     1>c:\users\infertom-pc\documents\visual studio 2010\projects\algorithmlab\algorithmlab\three.cpp(59): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\microsoft visual studio 10.0\vc\include\stdio.h(249) : 参见“freopen”的声明
+     1>c:\users\infertom-pc\documents\visual studio 2010\projects\algorithmlab\algorithmlab\three.cpp(61): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\microsoft visual studio 10.0\vc\include\stdio.h(304) : 参见“scanf”的声明
+     1>c:\users\infertom-pc\documents\visual studio 2010\projects\algorithmlab\algorithmlab\three.cpp(65): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\microsoft visual studio 10.0\vc\include\stdio.h(304) : 参见“scanf”的声明
+     1>c:\users\infertom-pc\documents\visual studio 2010\projects\algorithmlab\algorithmlab\three.cpp(68): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\microsoft visual studio 10.0\vc\include\stdio.h(304) : 参见“scanf”的声明
+       ManifestResourceCompile:
+         所有输出均为最新。
+       Link:
+         D:\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"c:\users\infertom-pc\documents\visual studio 2010\Projects\AlgorithmLab\Debug\AlgorithmLab.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\AlgorithmLab.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"c:\users\infertom-pc\documents\visual studio 2010\Projects\AlgorithmLab\Debug\AlgorithmLab.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"c:\users\infertom-pc\documents\visual studio 2010\Projects\AlgorithmLab\Debug\AlgorithmLab.lib" /MACHINE:X86 Debug\AlgorithmLab.exe.embed.manifest.res
+         Debug\one.obj
+         Debug\three.obj
+         Debug\two.obj
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\AlgorithmLab.exe.embed.manifest" /manifest Debug\AlgorithmLab.exe.intermediate.manifest
+         所有输出均为最新。
+       LinkEmbedManifest:
+         所有输出均为最新。
+         AlgorithmLab.vcxproj -> c:\users\infertom-pc\documents\visual studio 2010\Projects\AlgorithmLab\Debug\AlgorithmLab.exe
+       FinalizeBuildStatus:
+         正在删除文件“Debug\AlgorithmLab.unsuccessfulbuild”。
+         正在对“Debug\AlgorithmLab.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“c:\Users\infertom-pc\documents\visual studio 2010\Projects\AlgorithmLab\AlgorithmLab\AlgorithmLab.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:01.40
