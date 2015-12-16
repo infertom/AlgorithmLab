@@ -1,80 +1,69 @@
-/*
-//#include <bits/stdc++.h>
 #include <cstdio>
-#include <cstring>
 #include <cstdlib>
-#include <iostream>
+#include <cstring>
 #include <algorithm>
+#include <iostream>
 using namespace std;
-
 typedef long long ll;
-const int MAXSIZE = 10000 + 100;
-const int MAXN = 1000 + 100;
 
-int N, C;
-int val[MAXN], cost[MAXN];
-int bag[MAXSIZE][MAXSIZE], vis[MAXSIZE][MAXSIZE];
-int ans[MAXN];
+const int MAXN = 1e3 + 100;
+const int MAXSUM = 1e3 + 100;
 
+/************************************************************************/
+/* 
+回溯01背包
+*/
+/************************************************************************/
+int n, allSum;
+int bag[MAXN][MAXSUM], vis[MAXN][MAXSUM];
+int w[MAXN], v[MAXN];
+//初始化
 void init()
 {
 	memset(bag, 0, sizeof bag);
-	memset(vis, 0, sizeof vis);
+	memset(vis, -1, sizeof vis);
+	cin>>allSum;
+	for (int i = 1; i <= n; i++) cin>>w[i];
+	for (int i = 1; i <= n; i++) cin>>v[i];
 }
 
-int cal()
+//回溯01背包
+int cal(int pos, int sum)
 {
-	for (int i = 1; i <= N; i++){
-		for (int sum = C; sum; sum--){
-			/ *bag[sum] = max(bag[sum], bag[sum-cost[i]] + val[i]);* /
-			if ( sum >= cost[i] && bag[i-1][sum] < bag[i-1][sum-cost[i]] + val[i] ){
-				bag[i][sum] = bag[i-1][sum-cost[i]] + val[i];
-				vis[i][sum] = i;
-			}else{
-				bag[i][sum] = bag[i-1][sum];
-				vis[i][sum] = vis[i-1][sum];
-			}
-		}
-	}
-// 	for (int i = 1; i <= N; i++){
-// 		for (int j = 0; j <= C; j++){
-// 			printf("%d ", vis[i][j]);
-// 		}
-// 		cout<<endl;
-// 	}
+	if ( !pos ) return 0;
+	if ( ~vis[pos][sum] ) return bag[pos][sum];
 
-	int sum = C, k = N;
-	while ( sum && k )
-	{
-		k = vis[k][sum];
-		ans[k] = 1;
-		sum -= cost[k];
-		k--;
+	if ( sum >= w[pos] && v[pos] + cal(pos-1, sum-w[pos]) > cal(pos-1, sum) ){
+		bag[pos][sum] = v[pos] + bag[pos-1][sum-w[pos]];
+		vis[pos][sum] = 1;
+	}else{
+		bag[pos][sum] = bag[pos-1][sum];
+		vis[pos][sum] = 0;
 	}
 
-	return bag[N][C];
+	return bag[pos][sum];
+}
+
+//打印答案
+void printAns(int pos, int sum)
+{
+	if ( !pos ) return ;
+
+	printAns(pos-1, sum - vis[pos][sum] * w[pos]);
+	cout<<vis[pos][sum]<<" ";
+	if ( pos == n ) cout<<endl;
 }
 
 int main()
 {
 	freopen("in.txt", "r", stdin);
 
-	while ( scanf("%d%d", &N, &C) != EOF )
+	while ( cin>>n )
 	{
 		init();
-		for (int i = 1; i <= N; i++){
-			scanf("%d", &cost[i]);
-		}
-		for (int i = 1; i <= N; i++){
-			scanf("%d", &val[i]);
-		}
-
-		//printf("%d\n", cal());
-		cal();
-		for (int i = 1; i <= N; i++){
-			printf("%d%c", ans[i], (i==N)? '\n':' ');
-		}
+		cal(n, allSum);
+		printAns(n, allSum);
 	}
 
 	return 0;
-}*/
+}

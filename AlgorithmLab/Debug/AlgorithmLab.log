@@ -1,10 +1,14 @@
-﻿生成启动时间为 2015/12/16 20:16:31。
+﻿生成启动时间为 2015/12/17 1:18:36。
      1>项目“C:\Users\Infertom-PC\Documents\Visual Studio 2010\Projects\AlgorithmLab\AlgorithmLab\AlgorithmLab.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
          正在创建“Debug\AlgorithmLab.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        ClCompile:
-         D:\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt one.cpp
-         one.cpp
+         D:\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt three.cpp
+         three.cpp
+     1>c:\users\infertom-pc\documents\visual studio 2010\projects\algorithmlab\algorithmlab\three.cpp(9): warning C4244: “初始化”: 从“double”转换到“const int”，可能丢失数据
+     1>c:\users\infertom-pc\documents\visual studio 2010\projects\algorithmlab\algorithmlab\three.cpp(10): warning C4244: “初始化”: 从“double”转换到“const int”，可能丢失数据
+     1>c:\users\infertom-pc\documents\visual studio 2010\projects\algorithmlab\algorithmlab\three.cpp(59): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\microsoft visual studio 10.0\vc\include\stdio.h(249) : 参见“freopen”的声明
        ManifestResourceCompile:
          所有输出均为最新。
        Link:
@@ -25,4 +29,4 @@
 
 生成成功。
 
-已用时间 00:00:01.26
+已用时间 00:00:01.38
