@@ -1,3 +1,4 @@
+/*
 //#include <bits/stdc++.h>
 #include <cstdio>
 #include <cstring>
@@ -25,7 +26,7 @@ int cal()
 {
 	for (int i = 1; i <= N; i++){
 		for (int sum = C; sum; sum--){
-			/*bag[sum] = max(bag[sum], bag[sum-cost[i]] + val[i]);*/
+			/ *bag[sum] = max(bag[sum], bag[sum-cost[i]] + val[i]);* /
 			if ( sum >= cost[i] && bag[i-1][sum] < bag[i-1][sum-cost[i]] + val[i] ){
 				bag[i][sum] = bag[i-1][sum-cost[i]] + val[i];
 				vis[i][sum] = i;
@@ -76,4 +77,4 @@ int main()
 	}
 
 	return 0;
-}
+}*/
